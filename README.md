@@ -14,7 +14,11 @@ This repository is an example of a directory that can be zipped up and deployed 
 
 Once the dependencies are installed (e.g. `numpy` and `astropy`) you need to defined the function for Lambda to execute. In this case we have a file named `process.py` and a `handler` function. We configure Lambda to execute `process.handler`
 
-Currently we have the FITS file location hard-coded into the processing code but this could be dynamically passed. 
+Currently we have the FITS file location hard-coded into the processing code but this could be dynamically passed.
+
+#### What this code does
+
+The following code downloads a FITS file from the [Hubble Legacy Archive](https://hla.stsci.edu) and inspects the contents of the file using `astropy.io.fits`
 
 ```python
 import os
@@ -42,3 +46,7 @@ if __name__ == "__main__":
     handler('', '')
 
 ```
+
+#### What this code should do next
+
+Use something like [`astroquery.mast`](http://astroquery.readthedocs.io/en/latest/mast/mast.html) to query for a collection of files and call the Lambda function for each file (i.e. dynamically pass the location of the FITS file). Then do something clever and write the result to S3?
