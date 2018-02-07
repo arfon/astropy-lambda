@@ -1,6 +1,6 @@
 ## Astropy and Lambda
 
-This repo is a WIP but the general idea is to get Astropy running on [AWS Lambda](https://aws.amazon.com/lambda/).
+:construction: This repo is a WIP but the general idea is to get Astropy running on [AWS Lambda](https://aws.amazon.com/lambda/).
 
 This repository is an example of a directory that can be zipped up and deployed to Lambda.
 
