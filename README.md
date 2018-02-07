@@ -16,6 +16,23 @@ Once the dependencies are installed (e.g. `numpy` and `astropy`) you need to def
 
 Currently we have the FITS file location hard-coded into the processing code but this could be dynamically passed.
 
+### Does it work?
+
+Yeah, pretty much. Here's what the output from Lambda looks like:
+
+```
+START RequestId: 3096ba02-0c3e-11e8-be1d-b39e9f31e05f Version: $LATEST
+Downloading https://hla.stsci.edu/cgi-bin/ecfproxy?file_id=hag_j004524.96+403851.8_j8hpdcaoq_v01.drizzle.fits [Done]
+Filename: /tmp/tmpt3EFwI
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU      23   ()      
+  1  SCI_F850LP    1 ImageHDU        30   (100, 100)   float32   
+  2  WHT_F850LP    1 ImageHDU        24   (100, 100)   float32   
+None
+END RequestId: 3096ba02-0c3e-11e8-be1d-b39e9f31e05f
+REPORT RequestId: 3096ba02-0c3e-11e8-be1d-b39e9f31e05f	Duration: 173.98 ms	Billed Duration: 200 ms 	Memory Size: 512 MB	Max Memory Used: 63 MB
+```
+
 #### What this code does
 
 The following code downloads a FITS file from the [Hubble Legacy Archive](https://hla.stsci.edu) and inspects the contents of the file using `astropy.io.fits`
